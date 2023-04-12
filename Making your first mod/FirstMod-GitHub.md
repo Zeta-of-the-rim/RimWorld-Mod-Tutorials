@@ -26,7 +26,7 @@ IDEs are Integrated Development Environments. They are a code editor and a compi
 
 =Making the folder structure=
 '''''There are mod templates available for quick setup however it is recommended to create the folder structure manually at least once to get a better understanding of how mods work.'''''
-To start making a mod we need to create a folder for the mod. This folder will contain all the files and folders that make up the mod. to keep things organized we will create a folder in rimworlds mod local folder. this is located at: <br/><pre>(RimWorldInstallFolder)/Mods/</pre>
+To start making a mod we need to create a folder for the mod. This folder will contain all the files and folders that make up the mod. to keep things organized we will create a folder in rimworlds mod local folder. this is located at: <br/>'''xml(RimWorldInstallFolder)/Mods/'''
 '''''Note: is is not recommended to put your mod in the steam mods folder'''''
 
 ==Creating the about file==
@@ -34,13 +34,13 @@ Now lets make an About folder inside the mod folder. This folder will contain in
 
 Inside the About folder we will create a file called About.xml. This file will contain the information about the mod. inside the file we will add the following code: <br/>
 
-<pre>
+'''xml
 <?xml version="1.0" encoding="UTF-8"?> <!-- Comments in XML look like this-->
-</pre>
+'''
 <br/>
 This is the first line of every XML file. it tells the computer that this is an XML file and what encoding to use. (get used to seeing this line in every XML file you make) <br/>
 now we will add the following code to the file: <br/>
-<pre>
+'''xml
 <ModMetaData>
     <name>Mod Name Here</name> <!-- This is the name of the mod -->
     <author>Your Name Here</author> 
@@ -50,7 +50,7 @@ now we will add the following code to the file: <br/>
         <li>1.4</li>
     </supportedVersions> <!-- This is the version of rimworld that the mod is compatible with -->
 </ModMetaData> <!-- be sure to close all tags you open -->
-</pre>
+'''
 <br/>
 Now save the file and close it. <br/>
 '''''Note: the name of the file must be exactly "About.xml"'''''
@@ -65,7 +65,7 @@ in the root of the mod folder create a folder called "Patchs". this folder will 
 lets also create a folder called "Textures" inside the mod folder. this folder will contain all the images that will be used in the mod. <br/>
 
 your mod folder should now look like this: <br/>
-<pre>
+'''xml
 ModName
     About
         About.xml
@@ -75,19 +75,19 @@ ModName
     Patchs
         ThingDefs_Patch.xml
     Textures
-</pre>
+'''
 
 =Adding content to the mod=
 
 ==Adding a new item==
 Now that we have the basic folder structure set up we can start adding content to the mod. to start we will add a new item to the game. open the "ThingDefs.xml" file and add the following code: <br/>
 
-<pre> 
+'''xml 
 <?xml version="1.0" encoding="UTF-8"?>
-</pre>
+'''
 Remember this is the first line of every XML file.
 <br/>
-<pre> 
+'''xml 
 <Defs>
     <ThingDef>
         <defName>ModName_ItemName</defName> <!-- This is the name of the item. it must be unique and follow the format ModName_ItemName -->
@@ -105,7 +105,7 @@ Remember this is the first line of every XML file.
         </statBases>
     </ThingDef>
 </Defs>
-</pre>
+'''
 Now save the file and close it. In RimPy enable the mod and start the game. In Settings Enable the "Dev Mode" option. Now on the main menu click on the "Start Test Map" button. This will start a new game with a test map. Once the game has loaded open the Debug menu, in the Debug menu click on the "Spawn Thing" button. In the "Spawn Thing" menu type in the name of the item you just added. Click on the item then click anywhere on the map to spawn it.
 <br/>
 Congratulations you have just added your first item to the game. 
