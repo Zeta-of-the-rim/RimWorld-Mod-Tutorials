@@ -18,7 +18,7 @@ If you want to contribute to the wiki, you don't need to clone the repository. Y
 
 On top of the Markdown files for the wiki, this repository also contains Markdown files designed to be viewed on GitHub. These files are identical to the wiki pages except they have been formatted to be viewed on GitHub. These files are Named `TUTORIALNAME-GitHub.md` and are next to the wiki pages.
 
-EDIT: I am not currently Convert the wiki pages to GitHub format as i currently don't have the time (and it takes forever). 
+EDIT: I am not currently converting the wiki pages to GitHub format as i currently don't have the time (and it takes forever). 
 If you 
 A: want to help, feel free to make a pull request.
 B: Know how to convert the wiki pages to GitHub format, let me know and i will add you as a collaborator.
