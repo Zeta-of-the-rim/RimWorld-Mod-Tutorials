@@ -78,8 +78,44 @@ ModName
     Textures
 </pre>
 
-==adding content to the mod==
+=Adding content to the mod=
+
+==Adding a new item==
 Now that we have the basic folder structure set up we can start adding content to the mod. to start we will add a new item to the game. open the "ThingDefs.xml" file and add the following code: <br/>
 
+<pre> 
+<?xml version="1.0" encoding="UTF-8"?>
+</pre>
+Remember this is the first line of every XML file.
+<br/>
+<pre> 
+<Defs>
+    <ThingDef>
+        <defName>ModName_ItemName</defName> <!-- This is the name of the item. it must be unique and follow the format ModName_ItemName -->
+        <label>Item Name</label> <!-- This is the name of the item that will be displayed in game -->
+        <description>A description of the item</description> 
+        <graphicData>
+            <texPath><!-- This is the path to the image that will be used for the item --></texPath> 
+            <graphicClass>Graphic_Single</graphicClass> <!-- This is the type of graphic that will be used for the item leave this as Single for now -->
+        </graphicData>
+        <stackLimit>75</stackLimit> <!-- This is the max number of items that can be stacked in one tile -->
+        <category>ResourcesRaw</category> <!-- This is the category that the item will be placed in -->
+        <thingClass>Thing</thingClass> <!-- This is the class that the item will use -->
+        <statBases>
+            <MarketValue>10</MarketValue> <!-- This is the value of the item -->
+        </statBases>
+    </ThingDef>
+</Defs>
+</pre>
+Now save the file and close it. In RimPy enable the mod and start the game. In Settings Enable the "Dev Mode" option. Now on the main menu click on the "Start Test Map" button. This will start a new game with a test map. Once the game has loaded open the Debug menu, in the Debug menu click on the "Spawn Thing" button. In the "Spawn Thing" menu type in the name of the item you just added. Click on the item then click anywhere on the map to spawn it.
+<br/>
+Congratulations you have just added your first item to the game. 
 
-
+==Adding a new item that rots==
+Now that we have added a new item to the game we can add some more features to it. to start we will make the item rot. open the "ThingDefs.xml" file and add the following code to your items ThingDef: <br/>
+<comps>
+     <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart> <!-- This is the number of days it takes for the item to start rotting -->
+        <daysToDessicated>3</daysToDessicated> <!-- This is the number of days it takes for the item to start dessicating -->
+    </li>
+</comps>
