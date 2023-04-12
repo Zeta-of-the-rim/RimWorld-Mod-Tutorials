@@ -121,3 +121,10 @@ Now that we have added a new item to the game we can add some more features to i
         <daysToDessicated>3</daysToDessicated> <!-- This is the number of days it takes for the item to start dessicating -->
     </li>
 </comps>
+
+=GitHub Refrence=
+An example of the XML file that were created in this tutorial can be found [https://github.com/Burgess12/RimWorld-Mod-Tutorials here] uploaded to GitHub. When 
+
+
+
+[[Category:Modding tutorials]]
