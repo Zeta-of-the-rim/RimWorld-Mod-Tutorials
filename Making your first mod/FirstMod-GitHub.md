@@ -26,7 +26,8 @@ IDEs are Integrated Development Environments. They are a code editor and a compi
 
 ## Making the folder structure
 ***There are mod templates available for quick setup however it is recommended to create the folder structure manually at least once to get a better understanding of how mods work.***
-To start making a mod we need to create a folder for the mod. This folder will contain all the files and folders that make up the mod. to keep things organized we will create a folder in rimworlds mod local folder. this is located at: <br/>```xml(RimWorldInstallFolder)/Mods/'''
+To start making a mod we need to create a folder for the mod. This folder will contain all the files and folders that make up the mod. to keep things organized we will create a folder in rimworlds mod local folder. this is located at: <br/>
+<pre>(RimWorldInstallFolder)/Mods/</pre>
 ***Note: is is not recommended to put your mod in the steam mods folder***
 
 ### Creating the about file
@@ -40,7 +41,8 @@ Inside the About folder we will create a file called About.xml. This file will c
 <br/>
 This is the first line of every XML file. it tells the computer that this is an XML file and what encoding to use. (get used to seeing this line in every XML file you make) <br/>
 now we will add the following code to the file: <br/>
-```
+
+```xml
 <ModMetaData>
     <name>Mod Name Here</name> <!-- This is the name of the mod -->
     <author>Your Name Here</author> 
