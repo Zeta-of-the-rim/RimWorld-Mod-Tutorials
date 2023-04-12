@@ -15,4 +15,4 @@ If you want to contribute to the wiki, you don't need to clone the repository. Y
 
 ## GitHub Tutorials
 
-on top of the Markdown files for the wiki, this repository also contains Markdown files designed to be viewed on GitHub. These files are identical to the wiki pages except they have been formatted to be viewed on GitHub. These files are Named `TUTORIALNAME-GitHub.md` and are next to the wiki pages.
+On top of the Markdown files for the wiki, this repository also contains Markdown files designed to be viewed on GitHub. These files are identical to the wiki pages except they have been formatted to be viewed on GitHub. These files are Named `TUTORIALNAME-GitHub.md` and are next to the wiki pages.

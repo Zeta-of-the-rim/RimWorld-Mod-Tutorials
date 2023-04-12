@@ -116,10 +116,12 @@ Congratulations you have just added your first item to the game.
 
 ### Adding a new item that rots
 Now that we have added a new item to the game we can add some more features to it. to start we will make the item rot. open the "ThingDefs.xml" file and add the following code to your items ThingDef: <br/>
+    
+```xml
 <comps>
      <li Class="CompProperties_Rottable">
         <daysToRotStart>2</daysToRotStart> <!-- This is the number of days it takes for the item to start rotting -->
         <daysToDessicated>3</daysToDessicated> <!-- This is the number of days it takes for the item to start dessicating -->
     </li>
 </comps>
-
+```
