@@ -1,6 +1,6 @@
 # Rimworld Mod Tutorials
 
-This is a collection of tutorials for Rimworld modding. It contains code examples and explanations for tutorials on the [https://rimworldwiki.com/index.php?title=Modding_Tutorials/](Rimworld Wiki) . as well as the Markdown files for the wiki.
+This is a collection of tutorials for Rimworld modding. It contains code examples and explanations for tutorials on the [Rimworld Wiki](https://rimworldwiki.com/index.php?title=Modding_Tutorials/) . as well as the Markdown files for the wiki.
 
 ## How to use this repository
 
