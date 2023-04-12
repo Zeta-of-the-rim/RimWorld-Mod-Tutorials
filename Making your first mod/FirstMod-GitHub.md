@@ -1,27 +1,25 @@
-{{BackToTutorials}}
-
+# Making your first mod
 This page is a tutorial on how to create a rimworld mod it will step you through the process of creating a mod from scratch. from basic files structure to writing code for your mod. This tutorial is aimed at people who have never created a mod before and are looking to get started. and is meant to be a updated guide to the old tutorials on the wiki.
 
-=Introdusion=
+## Introdusion
 Rimworld mods are created using XML and C# code. XML is used to define the content of the mod and C# is used to add functionality to the mod. For now we will focus on XML and later tutorials will cover C#.
 
 To get started we will create the basic files and folders that are needed for a mod. We will then add some basic content to the mod and test it in game.
 
-=Software=
+## Software
 To Get started making a mod with XML you will need to download the following:
 
-- a copy of Rimworld (duh)
-- a code editor
-- [https://steamcommunity.com/sharedfiles/filedetails/?id=1847679158 RimPy] (This is a Mod manager that will make it easier to test your mod)
-- [https://git-scm.com/ Git] Git can be scary at first but it is a very useful tool. and can be used to keep track of changes to your mod. (optional but highly recommended)
+* a copy of Rimworld (duh)
+* a code editor
+* [RimPy](https://steamcommunity.com/sharedfiles/filedetails/?id=1847679158) (This is a Mod manager that will make it easier to test your mod)
+* [Git](https://git-scm.com/ ) Git can be scary at first but it is a very useful tool. and can be used to keep track of changes to your mod. (optional but highly recommended)
 
-==Code Editor==
+=Code Editor=
 There are many code editors out there some of the most commonly used are:
 
-- [https://code.visualstudio.com/ Visual Studio Code] is a free code editer and has a lot of useful features and tools (this is what I will use).
-- [https://www.sublimetext.com/ Sublime Text] is a free code editor that popular .
-- [https://notepad-plus-plus.org/ Notepad++] is a very light weight code editor that is very easy to use however it is missing some features that make it less useful for larger projects.
-
+* [Visual Studio Code](https://code.visualstudio.com/ ) is a free code editer and has a lot of useful features and tools (this is what I will use).
+* [Sublime Text](https://www.sublimetext.com/) is a free code editor that popular .
+* [Notepad++](https://notepad-plus-plus.org/ ) is a very light weight code editor that is very easy to use however it is missing some features that make it less useful for larger projects.
 
 '''''About IDEs:'''''
 IDEs are Integrated Development Environments. They are a code editor and a compiler all in one. They are very useful for larger projects but can be overkill for smaller projects. IDEs are also very resource intensive and can slow down your computer. I would recommend using a code editor for now and when you are ready to start using C# you can look into IDEs.
