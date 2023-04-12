@@ -89,7 +89,8 @@ Now that we have the basic folder structure set up we can start adding content t
 </pre>
 Remember this is the first line of every XML file.
 <br/>
-<pre> 
+
+<pre>
 <Defs>
     <ThingDef>
         <defName>ModName_ItemName</defName> <!-- This is the name of the item. it must be unique and follow the format ModName_ItemName -->
