@@ -14,7 +14,7 @@ To Get started making a mod with XML you will need to download the following:
 * [RimPy](https://steamcommunity.com/sharedfiles/filedetails/?id=1847679158) (This is a Mod manager that will make it easier to test your mod)
 * [Git](https://git-scm.com/ ) Git can be scary at first but it is a very useful tool. and can be used to keep track of changes to your mod. (optional but highly recommended)
 
-=Code Editor=
+### Code Editor
 There are many code editors out there some of the most commonly used are:
 
 * [Visual Studio Code](https://code.visualstudio.com/ ) is a free code editer and has a lot of useful features and tools (this is what I will use).
@@ -24,12 +24,12 @@ There are many code editors out there some of the most commonly used are:
 ***About IDEs:***
 IDEs are Integrated Development Environments. They are a code editor and a compiler all in one. They are very useful for larger projects but can be overkill for smaller projects. IDEs are also very resource intensive and can slow down your computer. I would recommend using a code editor for now and when you are ready to start using C# you can look into IDEs.
 
-=Making the folder structure=
+## Making the folder structure
 ***There are mod templates available for quick setup however it is recommended to create the folder structure manually at least once to get a better understanding of how mods work.***
 To start making a mod we need to create a folder for the mod. This folder will contain all the files and folders that make up the mod. to keep things organized we will create a folder in rimworlds mod local folder. this is located at: <br/>```xml(RimWorldInstallFolder)/Mods/'''
 ***Note: is is not recommended to put your mod in the steam mods folder***
 
-==Creating the about file==
+### Creating the about file
 Now lets make an About folder inside the mod folder. This folder will contain information about the mod and the mods preview image.
 
 Inside the About folder we will create a file called About.xml. This file will contain the information about the mod. inside the file we will add the following code: <br/>
@@ -59,7 +59,7 @@ open RimPy and sort by local mods. you should see your mod listed. if you click 
 
 ***When adding a preview image to your mod you must name the image "Preview.png" and place it in the About folder the image should be 512x512 pixels and must be under 1mb***
 
-==Creating the other folder==
+==Creating the other folder=
 Now lets make a Defs folder inside the mod folder. This folder will contain all the XML files that define the content the mod will add. <br/>
 start by creating a folder called "Defs" inside the mod folder, inside the Defs folder create a file called "ThingDefs.xml" <br/>
 in the root of the mod folder create a folder called "Patchs". this folder will contain XML files that will be used to patch existing content in the game. inside the Patchs folder create a file called "ThingDefs_Patch.xml" <br/>
@@ -78,9 +78,9 @@ ModName
     Textures
 ```
 
-=Adding content to the mod=
+## Adding content to the mod
 
-==Adding a new item==
+### Adding a new item
 Now that we have the basic folder structure set up we can start adding content to the mod. to start we will add a new item to the game. open the "ThingDefs.xml" file and add the following code: <br/>
 
 ```xml 
@@ -111,7 +111,7 @@ Now save the file and close it. In RimPy enable the mod and start the game. In S
 <br/>
 Congratulations you have just added your first item to the game. 
 
-==Adding a new item that rots==
+### Adding a new item that rots
 Now that we have added a new item to the game we can add some more features to it. to start we will make the item rot. open the "ThingDefs.xml" file and add the following code to your items ThingDef: <br/>
 <comps>
      <li Class="CompProperties_Rottable">
