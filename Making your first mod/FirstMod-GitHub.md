@@ -40,7 +40,7 @@ Inside the About folder we will create a file called About.xml. This file will c
 <br/>
 This is the first line of every XML file. it tells the computer that this is an XML file and what encoding to use. (get used to seeing this line in every XML file you make) <br/>
 now we will add the following code to the file: <br/>
-```xml
+```
 <ModMetaData>
     <name>Mod Name Here</name> <!-- This is the name of the mod -->
     <author>Your Name Here</author> 
@@ -66,6 +66,7 @@ in the root of the mod folder create a folder called "Patchs". this folder will 
 lets also create a folder called "Textures" inside the mod folder. this folder will contain all the images that will be used in the mod. <br/>
 
 your mod folder should now look like this: <br/>
+
 ```xml
 ModName
     About
