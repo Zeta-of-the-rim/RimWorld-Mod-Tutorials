@@ -21,13 +21,13 @@ There are many code editors out there some of the most commonly used are:
 * [Sublime Text](https://www.sublimetext.com/) is a free code editor that popular .
 * [Notepad++](https://notepad-plus-plus.org/ ) is a very light weight code editor that is very easy to use however it is missing some features that make it less useful for larger projects.
 
-'''''About IDEs:'''''
+***About IDEs:***
 IDEs are Integrated Development Environments. They are a code editor and a compiler all in one. They are very useful for larger projects but can be overkill for smaller projects. IDEs are also very resource intensive and can slow down your computer. I would recommend using a code editor for now and when you are ready to start using C# you can look into IDEs.
 
 =Making the folder structure=
-'''''There are mod templates available for quick setup however it is recommended to create the folder structure manually at least once to get a better understanding of how mods work.'''''
+***There are mod templates available for quick setup however it is recommended to create the folder structure manually at least once to get a better understanding of how mods work.***
 To start making a mod we need to create a folder for the mod. This folder will contain all the files and folders that make up the mod. to keep things organized we will create a folder in rimworlds mod local folder. this is located at: <br/>```xml(RimWorldInstallFolder)/Mods/'''
-'''''Note: is is not recommended to put your mod in the steam mods folder'''''
+***Note: is is not recommended to put your mod in the steam mods folder***
 
 ==Creating the about file==
 Now lets make an About folder inside the mod folder. This folder will contain information about the mod and the mods preview image.
@@ -53,10 +53,11 @@ now we will add the following code to the file: <br/>
 ```
 <br/>
 Now save the file and close it. <br/>
-'''''Note: the name of the file must be exactly "About.xml"'''''
+
+***Note: the name of the file must be exactly "About.xml"***
 open RimPy and sort by local mods. you should see your mod listed. if you click on it you should see the information you entered in the About.xml file. <br/>
 
-'''''When adding a preview image to your mod you must name the image "Preview.png" and place it in the About folder the image should be 512x512 pixels and must be under 1mb'''''
+***When adding a preview image to your mod you must name the image "Preview.png" and place it in the About folder the image should be 512x512 pixels and must be under 1mb***
 
 ==Creating the other folder==
 Now lets make a Defs folder inside the mod folder. This folder will contain all the XML files that define the content the mod will add. <br/>
