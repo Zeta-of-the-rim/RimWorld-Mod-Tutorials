@@ -1,1 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <thingClass>ThingWithComps</thingClass>
+        <defName>MM_Resource</defName>
+        <label>Resource</label>
+        <description>Resource</description>
+        <statBases>
+            <MarketValue>1</MarketValue>
+            <MaxHitPoints>300</MaxHitPoints>
+            <Mass>1</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.1</DeteriorationRate>
+            <Beauty>2</Beauty>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Item/Resource/Resource</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>2</daysToRotStart> <!-- This is the number of days it takes for the item to start rotting -->
+                <rotDestroys>true</rotDestroys> <!-- This is whether or not the item will be destroyed when it rots -->
+            </li>
+       </comps>
+
+    </ThingDef>
+</Defs>
