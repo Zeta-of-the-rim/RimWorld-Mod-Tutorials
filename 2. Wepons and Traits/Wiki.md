@@ -240,7 +240,7 @@ The verbs define (in this case) the how the weapon shoots. We define the project
     </li>
 </tools>
 </pre>
-In this case the tools are used to define the melee attacks of the weapon. Making sure to enclose each attack in a <li> tag give your attack a label, define the damage type, how much damage it does and lastly give it a cooldown time. </br>
+In this case the tools are used to define the melee attacks of the weapon. Making sure to enclose each attack in a "li" tag give your attack a label, define the damage type, how much damage it does and lastly give it a cooldown time. </br>
 
 Before we forget we need to close the "ThingDef" 
 <pre>
@@ -256,7 +256,7 @@ Currently there weapon is unlocked by default. Lets add a research project to un
 
 ==Making the File==
 While we could add the research project to the same file as the weapon it is good practice to keep things tidy. So we lets make a new file in the "Defs" folder called "ResearchProjectDef.xml" </br>
-Remember to add the Xml header and <pre> <Defs> </pre> tag. (Remember this can be done with "rwxxml")
+Remember to add the Xml header and "Defs" tag. (Remember this can be done with "rwxxml")
 
 ==Adding the Research Project==
 The Xml for the research project is shorter than the weapon however it still requires correct spelling and syntax. </br>
@@ -316,7 +316,7 @@ By simply adding the researchPrerequisite tag and giving it the gameId of the re
 Traits are a great way to add new gameplay mechanics to your mod. For now we will be adding a trait that makes the colonist have a higher Crafting skill and lower carrying capacity. </br>
 
 ==Making the File==
-To keep things tidy we will make a new file in the "Defs" folder called "TraitDef.xml" (Remember to add the Xml header and <pre> <Defs> </pre> tag. [Remember this can be done with "rwxxml"])
+To keep things tidy we will make a new file in the "Defs" folder called "TraitDef.xml" (Remember to add the Xml header and "Defs" tag. [Remember this can be done with "rwxxml"])
 
 ==Adding the Trait==
 The Xml for the trait is quite straight forward once you know what each tag does (for code snippets use ""rwtrait") </br>
