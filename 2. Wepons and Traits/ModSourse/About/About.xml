@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+    <name>Weapon and Traits</name>
+    <author>Zeta</author>
+    <packageId>Zeta.WeaponTrait</packageId>
+    <description>Simple tutorial mod that adds a new weapon and trait for reference and learning purposes.</description>
+    <supportedVersions>
+        <li>1.4</li>
+    </supportedVersions>
+</ModMetaData>
+<!--
+When adding a preview photo
+
+Must be called Preview.png
+
+Should be
+640x360
+
+Must Not Be Larger then 1MB in size
+ -->
