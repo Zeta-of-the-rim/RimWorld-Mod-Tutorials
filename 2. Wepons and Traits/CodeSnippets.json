@@ -1,12 +1,15 @@
 {
-    
-    "Rimworld XML Header": {
-    "prefix": ["rwxml", "Rimworld XML Header"],
-    "body": [ "<?xml version=\"1.0\" encoding=\"utf-8\"?>"],
-    "description": "Rimworld XML Header"
-    },
+//Mod snippets for Rimworld
 
-"Rimworld Ranged Weapon": {
+	//Mod weapon
+	"Rimworld XML Header":{
+		"prefix": ["rwxml", "Rimworld XML Header"],
+		"body": [ "<?xml version=\"1.0\" encoding=\"utf-8\"?>"],
+		"description": "Rimworld XML Header"
+
+	},
+	
+	"Rimworld Ranged Weapon": {
 	"prefix": ["rwweapon", "rwweaponranged", "Ranged Weapon"],
 	"body": [
 	"<ThingDef ParentName=\"BaseHumanMakeableGun\">", 
@@ -74,7 +77,7 @@
 		"\t\t</li>",
 	"\t</tools>",
 "</ThingDef>" ],
-	"description": "Quick weapon"
+	"description": "Quick weapon",
 	},
 	"Defs": {
 		"prefix": "Defs",
@@ -85,5 +88,137 @@
 		],
 		"description": "Completion for Defs"
 
-	}
+	},
+
+	"Rimworld Bullet":{
+		"prefix": ["rwbullet", "Rimworld Bullet"],
+		"body": [    
+		"<ThingDef ParentName=\"BaseBullet\">",
+        "<defName>$1</defName>",
+        "<label>$2</label>",
+        "<graphicData>",
+        "\t<texPath>Things/Projectile/Bullet_Small</texPath>",
+        "\t<graphicClass>Graphic_Single</graphicClass>",
+        "\t<drawSize>$3</drawSize>",
+        "</graphicData>",
+        "<projectile>",
+        "\t<damageDef>Bullet</damageDef>",
+        "\t<damageAmountBase>$4</damageAmountBase>",
+        "\t<stoppingPower>$5</stoppingPower>",
+        "\t<speed>$6</speed>",
+        "</projectile>",
+    "</ThingDef>"
+]
+	},
+
+	//starting with the About.xml
+	"RwAbout": {
+		//Marking this as a file template
+		"isFileTemplate": true,
+		"prefix": ["Rimworld About" , "About"],
+		"body": [
+		"<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+		"<ModMetaData>",
+			"\t<name>$1</name>",
+			"\t<author>$2</author>",
+			"\t<packageId>$3</packageId>",
+			"\t<description>$4</description>",
+			"\t<supportedVersions>",
+				"\t\t<li>$5</li>",
+			"\t</supportedVersions>",	
+		"</ModMetaData> "
+		],
+		"description": "About.xml for Rimworld"
+		},
+	//Now for version file template
+	"RwFolder":{
+		"isFileTemplate": true,
+		"prefix": "Rimworld Version",
+		"body": [],
+		"description": "Basic file for version control"
+	},
+
+	//Def for thingsDef
+	
+	//Basic item like steel
+	"RwItem":{
+		"prefix": "Rimworld Resource",
+		"body": [],
+		"description": "Basic item resource for Rimworld"
+		},
+
+	//Basic Melee weapon
+	"RwWeaponMelee":{
+		"prefix": "Rimworld Melee",
+		"body": [],
+		"description": "Basic melee weapon XML for Rimworld"
+		},
+
+	//Apparel
+	"RwApparel":{
+		"prefix": "Rimworld Apparel",
+		"body": [],
+		"description": "Basic apparel XML for Rimworld"
+		},
+	
+	//Adding research
+	"RwResearch":{
+		"prefix": ["Rimworld Research", "rwresearch"],
+		"body": [
+"<ResearchProjectDef>",
+"<defName>$1</defName>",
+"<label>$2</label>",
+"<description>$3</description>",
+"<baseCost>$4</baseCost>",
+"<techLevel>$5</techLevel>",
+"<prerequisites>",
+"\t<li>$6</li>",
+"</prerequisites>",
+"<researchViewX>9.00</researchViewX>",
+"<researchViewY>4.80</researchViewY>",
+"</ResearchProjectDef>",
+		],
+		"description": "Basic research XML for Rimworld mod development"
+		},
+
+	//Adding recipes for fabrication, Smithy, cooking, etc
+	"RwRecipe":{
+		"prefix": "Rimworld Recipe",
+		"body": [],
+		"description": "XML for simple recipes in Rimworld"
+		},
+	
+	//changing existing content using patches
+	"RwPatch":{
+		"prefix": "Rimworld Patch",
+		"body": [],
+		"description": "XML for patching existing content in Rimworld"
+		},
+	
+	"RwTrait":{
+		"prefix": ["Rimworld Trait", "rwtrait"],
+		"body": [
+"<TraitDef>",
+"<defName>$1</defName>",
+"<commonality>${2|1,2,0.5|}</commonality>",
+"<disabledWorkTags>",
+"\t<li>$3</li>",
+"</disabledWorkTags>",
+"degreeDatas>",
+"\t<li>",
+"\t\t<label>$4</label>",
+"\t\t<description>$4</description>",
+"\t\t<degree>1</degree>",
+"\t\t\t<statOffsets>",
+"\t\t\t</statOffsets>",
+"\t\t\t<skillGains>",
+"\t\t\t</skillGains>",
+"\t</li>",
+"/degreeDatas>",
+"/TraitDef>",
+		],
+		"description": "XML for adding traits to Rimworld"
+		},
+	
 }
+	

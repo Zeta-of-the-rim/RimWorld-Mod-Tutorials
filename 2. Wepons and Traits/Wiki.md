@@ -248,7 +248,7 @@ Before we forget we need to close the "ThingDef"
 </br>
 
 ==Final Notes==
-And with that we have a working weapon with a custom bullet and recipe. to inprove the weapon you could add a custom sound and texture or change the stats to your liking. </br>
+And with that we have a working weapon with a custom bullet and recipe. to inprove the weapon you could add a custom sound and texture or change the stats to your liking. The best way to learn is to experiment or look at other mods (I recommend looking at Vanilla Weapons Expanded as there mods keep there code clean and tidy). </br>
 
 =Adding a Research Project=
 Currently there weapon is unlocked by default. Lets add a research project to unlock it. </br>
@@ -318,4 +318,71 @@ Traits are a great way to add new gameplay mechanics to your mod. For now we wil
 To keep things tidy we will make a new file in the "Defs" folder called "TraitDef.xml" (Remember to add the Xml header and <pre> <Defs> </pre> tag. [Remember this can be done with "rwxxml"])
 
 ==Adding the Trait==
+The Xml for the trait is quite straight forward once you know what each tag does (for code snippets use ""rwtrait") </br>
+===Code Block===
+<pre>
+<TraitDef>
+    <defName>Epic_crafting</defName>
+    <commonality>1</commonality>
+    <disabledWorkTags>
+        <li>Animals</li>
+    </disabledWorkTags>
+    <degreeDatas>
+        <li>
+            <label>Epic Crafting</label>
+            <description>[PAWN_nameDef] excels at crafting. [PAWN_pronoun] can carry heavy things and crafts very well</description>
+            <degree>1</degree>
+                <statOffsets>
+                    <CarryingCapacity>25</CarryingCapacity>
+                    <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
+                </statOffsets>
+                <skillGains>
+                    <li><key>Crafting</key><value>4</value></li>
+                </skillGains>
+        </li>
+    </degreeDatas>
+</TraitDef>
+</pre>
 
+===Code Breakdown===
+Right lets break down the code. </br>
+====Basic Tags====
+<pre>
+<defName>Epic_crafting</defName>
+<commonality>1</commonality>
+</pre>
+Like the other defs we give the trait a gameId however this time we also give it a commonality. This is the chance that the trait will be given to a colonist. also note that the Label and Description are inside the degreeDatas tag and not the main tag. </br>
+====Disabled Work Tags====
+<pre>
+<disabledWorkTags>
+    <li>Animals</li>
+</disabledWorkTags>
+</pre>
+Disabling work tags is a great way to make traits more unique. In this case we are disabling the animals work type. Remember to put all the work tags you want to disable inside there own <li> tag. </br>
+====Degree Data====
+<pre>
+<degreeDatas>
+    <li>
+        <label>Epic Crafting</label>
+        <description>[PAWN_nameDef] excels at crafting. [PAWN_pronoun] can carry heavy things and crafts very well</description>
+        <degree>1</degree>
+        <statOffsets>
+            <CarryingCapacity>25</CarryingCapacity>
+            <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
+        </statOffsets>
+        <skillGains>
+            <li><key>Crafting</key><value>4</value></li>
+        </skillGains>
+    </li>
+</degreeDatas>
+</pre>
+The degree data is where we define the effects of the trait. This also includes the label (player friendly name) and description. Stat offsets are changes to the colonists stats. In this case we are increasing the colonists carrying capacity by 25 and increasing work speed by 20%. Skill gains are static increases to the colonists skills. In this case we are increasing the colonists crafting skill by 4. </br>
+
+===Final Notes About Traits===
+Congratulations you have made your first trait. for now it only changes stats and skills however traits can do a lot more. The best way to learn about the more advanced possibilities is to look at other mods that add traits. </br>
+
+=Github=
+As with the other tutorials I have made I have the example mods on [https://github.com/Burgess12/RimWorld-Mod-Tutorials github] for you to download and look at. </br>
+
+=Next Steps=
+Now that you have made a mod with content you can start to look at more advanced topics such as adding new buildings, and starting to use frameworks like Vanilla Expanded Framework. </br>
