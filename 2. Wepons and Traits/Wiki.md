@@ -39,10 +39,11 @@ Start by adding the Xml header to the file.
 <pre>
 <?xml version="1.0" encoding="utf-8" ?>
 </pre>
- If using VsCode simply type "rwxml" and press tab to generate the header. </br>
 
- ==Making a bullet def==
- Before we can make a weapon there needs to be a bullet that the weapon can fire.
+If using VsCode simply type "rwxml" and press tab to generate the header. </br>
+
+==Making a bullet def==
+Before we can make a weapon there needs to be a bullet that the weapon can fire.
 <pre>
 <Defs>
     <ThingDef ParentName="BaseBullet">
