@@ -62,6 +62,7 @@ Lets get started!-->
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
+			<researchPrerequisite>tutorial_Research</researchPrerequisite>
         </recipeMaker>
         <!--verbs are what the weapon does. -->
         <verbs>

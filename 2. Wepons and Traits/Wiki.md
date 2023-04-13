@@ -248,4 +248,74 @@ Before we forget we need to close the "ThingDef"
 </br>
 
 ==Final Notes==
-And with that we have a working weapon with a custom bullet. to inprove the weapon you could add a custom sound and texture or change the stats to your liking. </br>
+And with that we have a working weapon with a custom bullet and recipe. to inprove the weapon you could add a custom sound and texture or change the stats to your liking. </br>
+
+=Adding a Research Project=
+Currently there weapon is unlocked by default. Lets add a research project to unlock it. </br>
+
+==Making the File==
+While we could add the research project to the same file as the weapon it is good practice to keep things tidy. So we lets make a new file in the "Defs" folder called "ResearchProjectDef.xml" </br>
+Remember to add the Xml header and <pre> <Defs> </pre> tag. (Remember this can be done with "rwxxml")
+
+==Adding the Research Project==
+The Xml for the research project is shorter than the weapon however it still requires correct spelling and syntax. </br>
+===Code Block===
+<pre>
+<ResearchProjectDef>
+    <defName>tutorial_Research</defName>
+    <label>My Mods Research</label>
+    <description>Craft the mithical tutorial gun.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+        <li>Gunsmithing</li>
+    </prerequisites>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>4.80</researchViewY>
+</ResearchProjectDef>
+</pre>
+</br>
+'''''If using the code snippets use "rwresearch" ''''' </br>
+===Code Breakdown===
+Ok lets break down the code. </br>
+====Names and Description====
+<pre>
+<defName>tutorial_Research</defName>
+<label>My Mods Research</label>
+<description>Craft the mithical tutorial gun.</description>
+</pre>
+Just like the weapon we give the project a gameId, and a user friendly name and a description. </br>
+====Cost, Tech Level and Prerequisites====
+<pre>
+<techLevel>Industrial</techLevel>
+<prerequisites>
+    <li>Gunsmithing</li>
+</prerequisites>
+</pre>
+The tech level will scale the cost of the research project based on the colony's tech level (Tribal starts will be more expensive than crashlanded). the baseCost is the cost of the project before scaling for tech level. prerequisites are the research projects that must be completed before this project can be researched. (In this case we are requiring Gunsmithing) </br>
+====Position====
+<pre>
+<researchViewX>9.00</researchViewX>
+<researchViewY>4.80</researchViewY>
+</pre>
+This is the position of the project in the research tree. This may take some trial and error to get right (Or you could use a mod like "ResearchPowl" that makes the tree easier to navigate) </br>
+===Locking the Weapon===
+Right we have a research project but we need to tell the game to use it. to do this we need to edit our weapons recipeMaker. </br>
+<pre>
+<recipeMaker>
+    <skillRequirements>
+        <Crafting>5</Crafting>
+    </skillRequirements>
+    <researchPrerequisite>tutorial_Research</researchPrerequisite>
+</recipeMaker>
+</pre>
+By simply adding the researchPrerequisite tag and giving it the gameId of the research project we have locked the weapon behind the research project. </br>
+
+=Adding New Traits=
+Traits are a great way to add new gameplay mechanics to your mod. For now we will be adding a trait that makes the colonist have a higher Crafting skill and lower carrying capacity. </br>
+
+==Making the File==
+To keep things tidy we will make a new file in the "Defs" folder called "TraitDef.xml" (Remember to add the Xml header and <pre> <Defs> </pre> tag. [Remember this can be done with "rwxxml"])
+
+==Adding the Trait==
+
