@@ -1,27 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="uft-8"?>
 <!--For now on this is how these tutorials will be structured. 
 Lets get started!-->
 
 <!-- To begin with we need to create a new bullet for our weapon. -->
-
 <Defs>
-    <ThingDef ParentName="BulletBase">
+    <ThingDef ParentName="BaseBullet">
         <defName>MM_Bullet</defName>
         <label>Tutorial Bullet</label>
         <graphicData>
             <texPath>Things/Projectile/Bullet_Small</texPath> 
             <!-- unlike the other tutorials, we are using a pre-existing texture that is already in the game. -->  
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>1.5</drawSize> <!-- bigger the number, bigger the bullet -->
+            <drawSize>1.1</drawSize> <!-- bigger the number, bigger the bullet -->
         </graphicData>
         <projectile>
             <!-- Now we define the projectiles damage. -->
             <damageDef>Bullet</damageDef>
             <damageAmountBase>10</damageAmountBase>
             <stoppingPower>1</stoppingPower>
-            <speed>66</speed>
+            <speed>44</speed>
         </projectile>
     </ThingDef>
+
+    
+
 
     <!-- Now we have a bullet, we need to create a weapon that uses it. -->
     <ThingDef ParentName="BaseHumanMakeableGun">
@@ -32,25 +34,23 @@ Lets get started!-->
             <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <uiIconScale>1.6</uiIconScale>
+        <uiIconScale>1.4</uiIconScale>
         <soundInteract>Interact_Revolver</soundInteract>
         <!-- Now we define the weapon's stats. -->
         <statBases>
             <WorkToMake>2000</WorkToMake>
             <Mass>1.6</Mass>
-            <AccracyTouch>0.99</AccracyTouch>
-            <AccracyShort>0.90</AccracyShort>
-            <AccracyMedium>0.80</AccracyMedium>
-            <AccracyLong>0.70</AccracyLong>
-            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+            <AccuracyTouch>0.95</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.80</AccuracyMedium>
+            <AccuracyLong>0.70</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
         </statBases>
         <!-- now we define the weapon's tags. -->
         <weaponTags>
             <li>SimpleGun</li>
             <li>Revolver</li>
         </weaponTags>
-        <!-- Now we define the weapon's class (this is like the weapon's type) -->
-        <weaponClass>RangedLight</weaponClass>
         <!-- Now we choose what will be used to make the weapon. -->
         <costList>
             <Steel>10</Steel>
@@ -62,9 +62,6 @@ Lets get started!-->
             <skillRequirements>
                 <Crafting>5</Crafting>
             </skillRequirements>
-            <!-- We can also add a research requirement. -->
-            <researchPrerequisite>Gunsmithing</researchPrerequisite>
-            <displayPriority>400</displayPriority>
         </recipeMaker>
         <!--verbs are what the weapon does. -->
         <verbs>
@@ -75,10 +72,10 @@ Lets get started!-->
                 <defaultProjectile>MM_Bullet</defaultProjectile>
                 <warmupTime>0.9</warmupTime>
                 <burstShotCount>3</burstShotCount>
-                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
                 <range>20</range>
                 <soundCast>Shot_Revolver</soundCast>
-                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>8</muzzleFlashScale>
             </li>
         </verbs>
@@ -103,5 +100,7 @@ Lets get started!-->
                 <cooldownTime>2.1</cooldownTime>
             </li>
         </tools>
-    </ThingDef>
+    </ThingDef> 
+
+    
 </Defs>

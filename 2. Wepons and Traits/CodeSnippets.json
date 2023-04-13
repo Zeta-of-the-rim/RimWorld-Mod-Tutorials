@@ -1,4 +1,11 @@
 {
+    
+    "Rimworld XML Header": {
+    "prefix": ["rwxml", "Rimworld XML Header"],
+    "body": [ "<?xml version=\"1.0\" encoding=\"utf-8\"?>"],
+    "description": "Rimworld XML Header"
+    },
+
 "Rimworld Ranged Weapon": {
 	"prefix": ["rwweapon", "rwweaponranged", "Ranged Weapon"],
 	"body": [
