@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="uft-8"?>
+<!--For now on this is how these tutorials will be structured. 
+Lets get started!-->
+
+<!-- To begin with we need to create a new bullet for our weapon. -->
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+        <defName>MM_Bullet</defName>
+        <label>Tutorial Bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath> 
+            <!-- unlike the other tutorials, we are using a pre-existing texture that is already in the game. -->  
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize> <!-- bigger the number, bigger the bullet -->
+        </graphicData>
+        <projectile>
+            <!-- Now we define the projectiles damage. -->
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>44</speed>
+        </projectile>
+    </ThingDef>
+
+    
+
+
+    <!-- Now we have a bullet, we need to create a weapon that uses it. -->
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>MM_Our_Gun</defName>
+        <label>Tutorial Gun</label>
+        <description>A simple gun for learning purposes. (Mod learning purposes dont give it to a child or something)</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.4</uiIconScale>
+        <soundInteract>Interact_Revolver</soundInteract>
+        <!-- Now we define the weapon's stats. -->
+        <statBases>
+            <WorkToMake>2000</WorkToMake>
+            <Mass>1.6</Mass>
+            <AccuracyTouch>0.95</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.80</AccuracyMedium>
+            <AccuracyLong>0.70</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+        </statBases>
+        <!-- now we define the weapon's tags. -->
+        <weaponTags>
+            <li>SimpleGun</li>
+            <li>Revolver</li>
+        </weaponTags>
+        <!-- Now we choose what will be used to make the weapon. -->
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>1</Plasteel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <!-- Now the weapon's requirements. -->
+        <recipeMaker>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+			<researchPrerequisite>tutorial_Research</researchPrerequisite>
+        </recipeMaker>
+        <!--verbs are what the weapon does. -->
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <!-- Now we define the Bullet the weapon uses. -->
+                <defaultProjectile>MM_Bullet</defaultProjectile>
+                <warmupTime>0.9</warmupTime>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+                <range>20</range>
+                <soundCast>Shot_Revolver</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        <!-- nice, we have shooting, but what happens when we get in melee? -->
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7</power>
+                <cooldownTime>3.1</cooldownTime>
+            </li>
+            <!-- you can add lots of melee but we will just add two. -->
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2.1</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef> 
+
+    
+</Defs>

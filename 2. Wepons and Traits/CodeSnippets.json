@@ -1,0 +1,224 @@
+{
+//Mod snippets for Rimworld
+
+	//Mod weapon
+	"Rimworld XML Header":{
+		"prefix": ["rwxml", "Rimworld XML Header"],
+		"body": [ "<?xml version=\"1.0\" encoding=\"utf-8\"?>"],
+		"description": "Rimworld XML Header"
+
+	},
+	
+	"Rimworld Ranged Weapon": {
+	"prefix": ["rwweapon", "rwweaponranged", "Ranged Weapon"],
+	"body": [
+	"<ThingDef ParentName=\"BaseHumanMakeableGun\">", 
+	"\t<defName>$1</defName>",
+	"\t<label>$2</label>",
+	"\t<description>$3</description>",
+	"\t<graphicData>",
+		"\t\t<texPath>${20| ,Things/Item/Equipment/WeaponRanged/|}$0</texPath>",
+		"\t\t<graphicClass>Graphic_Single</graphicClass>",
+	"\t</graphicData>",
+	"\t<uiIconScale>1</uiIconScale>",
+	"\t<soundInteract>$4</soundInteract>",
+	"\t<statBases>",
+		"\t\t<WorkToMake>$5</WorkToMake>",
+		"\t\t<Mass>$6</Mass>",
+		"\t\t<AccuracyTouch>$7</AccuracyTouch>",
+		"\t\t<AccuracyShort>$8</AccuracyShort>",
+		"\t\t<AccuracyMedium>$9</AccuracyMedium>",
+		"\t\t<AccuracyLong>$10</AccuracyLong>",
+		"\t\t<RangedWeapon_Cooldown>$11</RangedWeapon_Cooldown>",
+	"\t</statBases>",
+	"\t<weaponTags>",
+		"\t\t<li>$12</li>",
+	"\t</weaponTags>",
+	"\t<costList>",
+		"\t\t<Steel>10</Steel>",
+		"\t\t<ComponentIndustrial>1</ComponentIndustrial>",
+	"\t</costList>",
+	"\t<recipeMaker>",
+		"\t\t<skillRequirements>",
+			"\t\t\t<Crafting>$13</Crafting>",
+		"\t\t</skillRequirements>",
+	"\t</recipeMaker>",
+	"\t<verbs>",
+		"\t\t<li>",
+			"\t\t\t<verbClass>Verb_Shoot</verbClass>",
+			"\t\t\t<hasStandardCommand>true</hasStandardCommand>",
+			"\t\t\t<defaultProjectile>$14</defaultProjectile>",
+			"\t\t\t<warmupTime>$15</warmupTime>",
+			"\t\t\t<burstShotCount>$16</burstShotCount>",
+			"\t\t\t<ticksBetweenBurstShots>$17</ticksBetweenBurstShots>",
+			"\t\t\t<range>$18</range>",
+			"\t\t\t<soundCast>Shot_Revolver</soundCast>",
+			"\t\t\t<soundCastTail>GunTail_Light</soundCastTail>",
+			"\t\t\t<muzzleFlashScale>$19</muzzleFlashScale>",
+		"\t\t</li>",
+	"\t</verbs>",
+	"\t<tools>",
+		"\t\t<li>",
+			"\t\t\t<label>handle</label>",
+			"\t\t\t<capacities>",
+				"\t\t\t\t<li>Blunt</li>",
+			"\t\t\t</capacities>",
+			"\t\t\t<power>7</power>",
+			"\t\t\t<cooldownTime>3.1</cooldownTime>",
+		"\t\t</li>",
+		"\t\t<li>",
+			"\t\t\t<label>barrel</label>",
+			"\t\t\t<capacities>",
+				"\t\t\t\t<li>Blunt</li>",
+				"\t\t\t\t<li>Poke</li>",
+			"\t\t\t</capacities>",
+			"\t\t\t<power>5</power>",
+			"\t\t\t<cooldownTime>2.1</cooldownTime>",
+		"\t\t</li>",
+	"\t</tools>",
+"</ThingDef>" ],
+	"description": "Quick weapon",
+	},
+	"Defs": {
+		"prefix": "Defs",
+		"body": [
+			"<Defs>",
+			"\t$0",
+			"</Defs>"
+		],
+		"description": "Completion for Defs"
+
+	},
+
+	"Rimworld Bullet":{
+		"prefix": ["rwbullet", "Rimworld Bullet"],
+		"body": [    
+		"<ThingDef ParentName=\"BaseBullet\">",
+        "<defName>$1</defName>",
+        "<label>$2</label>",
+        "<graphicData>",
+        "\t<texPath>Things/Projectile/Bullet_Small</texPath>",
+        "\t<graphicClass>Graphic_Single</graphicClass>",
+        "\t<drawSize>$3</drawSize>",
+        "</graphicData>",
+        "<projectile>",
+        "\t<damageDef>Bullet</damageDef>",
+        "\t<damageAmountBase>$4</damageAmountBase>",
+        "\t<stoppingPower>$5</stoppingPower>",
+        "\t<speed>$6</speed>",
+        "</projectile>",
+    "</ThingDef>"
+]
+	},
+
+	//starting with the About.xml
+	"RwAbout": {
+		//Marking this as a file template
+		"isFileTemplate": true,
+		"prefix": ["Rimworld About" , "About"],
+		"body": [
+		"<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+		"<ModMetaData>",
+			"\t<name>$1</name>",
+			"\t<author>$2</author>",
+			"\t<packageId>$3</packageId>",
+			"\t<description>$4</description>",
+			"\t<supportedVersions>",
+				"\t\t<li>$5</li>",
+			"\t</supportedVersions>",	
+		"</ModMetaData> "
+		],
+		"description": "About.xml for Rimworld"
+		},
+	//Now for version file template
+	"RwFolder":{
+		"isFileTemplate": true,
+		"prefix": "Rimworld Version",
+		"body": [],
+		"description": "Basic file for version control"
+	},
+
+	//Def for thingsDef
+	
+	//Basic item like steel
+	"RwItem":{
+		"prefix": "Rimworld Resource",
+		"body": [],
+		"description": "Basic item resource for Rimworld"
+		},
+
+	//Basic Melee weapon
+	"RwWeaponMelee":{
+		"prefix": "Rimworld Melee",
+		"body": [],
+		"description": "Basic melee weapon XML for Rimworld"
+		},
+
+	//Apparel
+	"RwApparel":{
+		"prefix": "Rimworld Apparel",
+		"body": [],
+		"description": "Basic apparel XML for Rimworld"
+		},
+	
+	//Adding research
+	"RwResearch":{
+		"prefix": ["Rimworld Research", "rwresearch"],
+		"body": [
+"<ResearchProjectDef>",
+"<defName>$1</defName>",
+"<label>$2</label>",
+"<description>$3</description>",
+"<baseCost>$4</baseCost>",
+"<techLevel>$5</techLevel>",
+"<prerequisites>",
+"\t<li>$6</li>",
+"</prerequisites>",
+"<researchViewX>9.00</researchViewX>",
+"<researchViewY>4.80</researchViewY>",
+"</ResearchProjectDef>",
+		],
+		"description": "Basic research XML for Rimworld mod development"
+		},
+
+	//Adding recipes for fabrication, Smithy, cooking, etc
+	"RwRecipe":{
+		"prefix": "Rimworld Recipe",
+		"body": [],
+		"description": "XML for simple recipes in Rimworld"
+		},
+	
+	//changing existing content using patches
+	"RwPatch":{
+		"prefix": "Rimworld Patch",
+		"body": [],
+		"description": "XML for patching existing content in Rimworld"
+		},
+	
+	"RwTrait":{
+		"prefix": ["Rimworld Trait", "rwtrait"],
+		"body": [
+"<TraitDef>",
+"<defName>$1</defName>",
+"<commonality>${2|1,2,0.5|}</commonality>",
+"<disabledWorkTags>",
+"\t<li>$3</li>",
+"</disabledWorkTags>",
+"degreeDatas>",
+"\t<li>",
+"\t\t<label>$4</label>",
+"\t\t<description>$4</description>",
+"\t\t<degree>1</degree>",
+"\t\t\t<statOffsets>",
+"\t\t\t</statOffsets>",
+"\t\t\t<skillGains>",
+"\t\t\t</skillGains>",
+"\t</li>",
+"/degreeDatas>",
+"/TraitDef>",
+		],
+		"description": "XML for adding traits to Rimworld"
+		},
+	
+}
+	
