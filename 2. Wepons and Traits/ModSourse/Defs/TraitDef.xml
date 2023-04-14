@@ -10,6 +10,7 @@
 			<li>
 				<label>Epic Crafting</label>
 				<description>[PAWN_nameDef] excels at crafting. [PAWN_pronoun] can carry heavy things and crafts very well</description>
+				<!-- [PAWN_nameDef] and [PAWN_pronoun] will be replaced with the name of the pawn and their gender specific pronoun. -->
 				<degree>1</degree>
 					<statOffsets>
 						<CarryingCapacity>25</CarryingCapacity>
@@ -18,6 +19,7 @@
                     <skillGains>
 						<li><key>Crafting</key><value>4</value></li>
 					</skillGains>
+					<!-- unlike statOffsets, skillGains are static and only add/subtract the prawn's skill level. -->
 			</li>
 		</degreeDatas>
 	</TraitDef>
