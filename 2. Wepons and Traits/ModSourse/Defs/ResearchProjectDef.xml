@@ -5,11 +5,15 @@
         <label>My Mods Research</label>
         <description>Craft the mithical tutorial gun.</description>
         <baseCost>500</baseCost>
+        <!-- Points required to research this project before it is scaled by the colony's tech level. -->
         <techLevel>Industrial</techLevel>
+        <!-- The tech level the project will be scaled according to. -->
         <prerequisites>
           <li>Gunsmithing</li>
         </prerequisites>
         <researchViewX>9.00</researchViewX>
         <researchViewY>4.80</researchViewY>
+        <!-- The position of the project in the research tree. 
+        this may take some trial and error to get right. -->
       </ResearchProjectDef>
 </Defs>
