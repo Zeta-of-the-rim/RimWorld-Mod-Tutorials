@@ -219,6 +219,31 @@
 		],
 		"description": "XML for adding traits to Rimworld"
 		},
+
+	"Mod Dependencies":{
+		"prefix": "<modDependencies>",
+		"body": [
+			"<modDependencies>",
+			"\t",
+			"</modDependencies>"
+		],
+		"description": "Completion for mod dependencies"
+		},
+
+
+
+		//completions for vanilla expanded framework
+		"Vanilla Expanded Framework":
+		{
+			"prefix": "VEF",
+			"body": [
+"li>",
+"\tpackageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>",
+"\tdisplayName>Vanilla Expanded Framework</displayName>",
+"\t<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>",
+"\t<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>",
+"/li>",
+
 	
 }
 	
