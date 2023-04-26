@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- making the altnative fire mode -->
+    <MVCF.ModDef>
+        <defName>Tutorial_Weapons</defName>
+        <label>UnderBarrelLauncher</label>
+        <description>Declaring what framework features we want to use</description>
+        <ActivateFeatures>
+            <li>ExtraEquipmentVerbs</li>
+        </ActivateFeatures>
+    </MVCF.ModDef>
+    <ThingDef ParentName="BaseBullet"> <!-- even though this is a explosive it is still a bullet -->
+        <defName>mm_Twist</defName>
+        <label>grenade</label>
+        <graphicData>
+          <texPath>Things/Projectile/LauncherShot</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+          <speed>35</speed>
+          <damageDef>Bomb</damageDef> <!-- using the vanilla bomb damage -->
+          <explosionRadius>1.5</explosionRadius>
+          <arcHeightFactor>0.2</arcHeightFactor>
+          <shadowSize>0.6</shadowSize>
+        </projectile>
+      </ThingDef>
+    
+
+</Defs>

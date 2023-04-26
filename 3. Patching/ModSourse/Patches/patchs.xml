@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName = "Bullet_Revolver"]/projectile/damageAmountBase</xpath>
+        <value>
+            <damageAmountBase>100</damageAmountBase>
+        </value>
+    </Operation>
+
+
+    <!-- Now lets do multiple operations in one patch
+        in this case we are goingto make the assault rifle
+        even more powerful by making it shoot explosive
+        bullets -->
+    <Operation Class="PatchOperationSequence">
+        <success>Normal</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "Gun_AssaultRifle"]/verbs/li/defaultProjectile</xpath>
+                <value>
+                    <defaultProjectile>mm_Twist</defaultProjectile>
+                </value>
+            </li>
+            <!-- Now we need to add the Defs that exsplosive bullets need -->
+            <li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Gun_AssaultRifle"]/verbs/li</xpath>
+				<value>
+					<forcedMissRadius>1.9</forcedMissRadius>
+                    <targetParams>
+                        <canTargetLocations>true</canTargetLocations>
+                    </targetParams>
+				</value>
+			</li>
+        </operations>
+    </Operation>
+</Patch>
