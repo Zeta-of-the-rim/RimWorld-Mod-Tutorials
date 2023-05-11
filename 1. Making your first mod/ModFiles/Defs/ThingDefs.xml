@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <ThingDef ParentName="ResourceBase">
+    <!-- As a basic resource, we want to inherit from ResourceBase -->
         <thingClass>ThingWithComps</thingClass>
         <defName>MM_Resource</defName>
         <label>Resource</label>
